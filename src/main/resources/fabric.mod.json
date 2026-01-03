@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "hwn",
+  "version": "${version}",
+  "name": "lucky_die_for_fabric_1.20.1",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/hwn/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.hwn.hwn.client.HwnDataGenerator"
+    ],
+    "client": [
+      "com.hwn.hwn.client.HwnClient"
+    ],
+    "main": [
+      "com.hwn.hwn.Hwn"
+    ]
+  },
+  "mixins": [
+    "hwn.mixins.json",
+    {
+      "config": "hwn.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
